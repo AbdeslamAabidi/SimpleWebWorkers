@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <script src="./js/SimpleWebWorkers.js"></script>
+        
+        <script>
+
+            function function_1() {
+                console.log("function_1");
+            }
+
+            function function_2() {
+                console.log("function_2");
+            }
+
+            var $_1 = $_w(function_1);
+            var $_2 = $_w("./js/worker_1.js");
+            var $_3 = $_w(function_2);
+            var $_4 = $_w("./js/worker_2.js");
+
+        </script>
+
+    </head>
+<body>
+
+    <button onclick="$_1.start()">Start Worker 1</button>
+    <button onclick="$_1.stop()">Stop Worker 1</button>
+    
+    <hr />
+
+    <button onclick="$_2.start()">Start Worker 2</button>
+    <button onclick="$_2.stop()">Stop Worker 2</button>
+    
+    <hr />
+
+    <button onclick="$_3.start()">Start Worker 3</button>
+    <button onclick="$_3.stop()">Stop Worker 3</button>
+    
+    <hr />
+
+    <button onclick="$_4.start()">Start Worker 4</button>
+    <button onclick="$_4.stop()">Stop Worker 4</button>
+
+</body>
+</html> 
