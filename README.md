@@ -8,21 +8,24 @@ Simple wrapper to create, start and stop web workers from an internal script or 
 USAGE:
 ======
 
-## Create Worker 1
+## Create Worker 1 & 2
 ```js
     var $_1 = $_w(function_1);
+    var $_2 = $_w("./js/worker_1.js");
 ```
 
-## Start Worker 1
+## Start Worker 1 & 2
 ```js
-    $_1.start()
+    $_1.start();
+    $_2.start();
 ```
 
-## Stop Worker 2
+## Stop Worker 1 & 2
 ```js
-    $_2.start()
+    $_1.stop();
+    $_2.stop();
 ```    
-## Tests:
+## Compile:
 This has been compiled by typescript Version 2.7.2
 	
 ## The MIT License (MIT)
