@@ -1,9 +1,9 @@
 var i = 0;
 
-function timedCount() {
+function worker_1() {
   i = i + 1;
   postMessage(i);
-  setTimeout("timedCount()",500);
+  setTimeout("worker_1()",250);
 }
 
-timedCount();
+worker_1();
